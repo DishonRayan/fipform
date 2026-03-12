@@ -8,10 +8,6 @@ interface SupportSectionProps {
   onNavigateToEnrollment: () => void;
 }
 
-/**
- * SupportSection Component
- * Based on the provided design with a blue color palette
- */
 export const SupportSection: React.FC<SupportSectionProps> = ({ onNavigateToEnrollment }) => {
   const [activeButton, setActiveButton] = useState<'yes' | 'no' | null>(null);
   const [isLeaveModalOpen, setIsLeaveModalOpen] = useState(false);
@@ -47,17 +43,17 @@ export const SupportSection: React.FC<SupportSectionProps> = ({ onNavigateToEnro
           className="bg-[#F0F7FF] rounded-xl p-12 md:p-16 shadow-sm border border-[#E0EFFF] max-w-4xl mx-auto"
         >
           <div className="flex flex-col items-center gap-6">
-            {/* Circle Icon */}
+          
             <div className="w-20 h-20 rounded-full bg-white border-2 border-[#0067FF] flex items-center justify-center shadow-sm">
               <Stethoscope size={40} className="text-[#0067FF]" />
             </div>
 
-            {/* Question */}
+          
             <h3 className="text-xl md:text-2xl font-bold text-[#0067FF] tracking-tight text-center">
               Are you currently prescribed FIPSAR LITE?
             </h3>
 
-            {/* Buttons */}
+          
             <div className="flex flex-wrap justify-center gap-6 mt-4">
               <button 
                 onClick={handleYesClick}
@@ -66,7 +62,7 @@ export const SupportSection: React.FC<SupportSectionProps> = ({ onNavigateToEnro
                     ? 'bg-[#0067FF] text-white border-[#0067FF]' 
                     : 'bg-white text-[#0067FF] border-[#0067FF]'
                 }`}
-              >
+               >
                 Yes
               </button>
               <button 
